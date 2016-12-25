@@ -1,5 +1,5 @@
 import requests
-import thread
+import _thread
 from socketIO_client import SocketIO
 
 
@@ -103,5 +103,4 @@ class Wordhop:
                 socketIO.on('socket_id_set', on_socket_set_response)
                 socketIO.wait()
             
-        thread.start_new_thread(setupSocketClient, ())
-
+        _thread.start_new_thread(setupSocketClient, ())
